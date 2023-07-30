@@ -1,0 +1,77 @@
+body{
+    /* background: #41295a;  
+    background: -webkit-linear-gradient(to right, #2F0743, #41295a); 
+    background: linear-gradient(to right, #2F0743, #41295a);  */
+    /* background: #008f6c;
+    background: -webkit-linear-gradient(to right, #001510, #006e52);
+    background: linear-gradient(to right, #001510, #007a5b); */
+    background-image: url("../images/bg.jpg");
+    background-size: 100% 100%;
+}
+
+.home {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+}
+
+.home-title {
+    font-family: 'Borel', cursive;;
+    font-size: 3.5rem;
+    color: #ffffff8b;
+    text-align: center;
+    margin: 0;
+    padding-top: 5%;
+}
+
+.home-btn-text {
+    font-size: 1.6rem;
+    color: #ffffff8b;
+    text-align: center;
+}
+
+
+
+.home-button {
+    background: rgba( 255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(252, 254, 252, 0.37);
+    backdrop-filter: blur( 30px );
+    -webkit-backdrop-filter: blur( 30px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    text-align: center;
+    margin: 4% 4%;
+}
+
+.home-button :hover {
+    /* height: 10rem;
+    transition: 0.3s; */
+    /* background: rgba( 255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(64, 66, 64, 0.37);
+    backdrop-filter: blur( 80px );
+    -webkit-backdrop-filter: blur( 80px );
+    border-radius: 10px; */
+    /* border: 2px solid rgba( 255, 255, 255, 0.18 );  */
+}
+
+.home-btn-img {
+    block-size: 8rem;
+    padding: 3.2rem 7.8rem 1.2rem 7rem;
+}
+
+@media screen and (max-width:500px) {
+    .home-title {
+        font-size: 2.5rem;
+    }
+    .home-btn-img {
+        block-size: 6rem;
+        padding: 2.4rem 5.8rem 1.2rem 5.8rem;
+    }
+    .home-button {
+        margin: 2% 2%;
+    }
+}
+    
