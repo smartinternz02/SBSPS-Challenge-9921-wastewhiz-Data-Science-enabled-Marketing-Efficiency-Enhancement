@@ -3,9 +3,9 @@ import "./Dashboard.css";
 
 const Dashboard = () => {
     return (
-        <div className="card"> 
+        <div> 
             <Chart
-                url="https://public.tableau.com/views/IBMHACK/Sheet1?:language=en-GB&:display_count=n&:origin=viz_share_link"
+                url="https://public.tableau.com/views/NewDasboard_16908105173340/Dashboard1?:language=en-GB&:display_count=n&:origin=viz_share_link"
             />
         </div>
     );
