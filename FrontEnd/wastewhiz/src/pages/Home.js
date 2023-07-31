@@ -14,13 +14,13 @@ const Home = () => {
         <React.Fragment>
             <h1 className="home-title">WasteWhiz: Market Analytics Tool!</h1>
             <div className="home">
-                <Link to="/Dashboard" style={linkStyle}>
+                <Link to="http://localhost:5000/api/dashboard" style={linkStyle}>
                     <HomeButton 
                         url = {require("../images/customers.png")}
                         text = "Analytics"
                     />
                 </Link>
-                <Link to="/Dashboard" style={linkStyle}>
+                <Link to="http://localhost:5000/api/dashboard" style={linkStyle}>
                     <HomeButton 
                         url = {require("../images/customers.png")}
                         text = "Un-Turned Customers"
