@@ -1,3 +1,6 @@
+// Environment Variable Configuration
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 
@@ -50,7 +53,8 @@ app.use((error, req, res, next) => {
 });
 
 
-// listening to port 5000
-app.listen(8000, () => {
+// listening to port 
+const port = process.env.PORT || 8000;
+app.listen(port, () => {
     console.log("Server is running on port 8000")
 });
