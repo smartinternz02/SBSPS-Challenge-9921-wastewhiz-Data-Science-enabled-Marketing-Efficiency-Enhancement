@@ -14,15 +14,15 @@ const Home = () => {
         <React.Fragment>
             <h1 className="home-title">WasteWhiz: Market Analytics Tool!</h1>
             <div className="home">
-                <Link to="http://localhost:5000/api/dashboard" style={linkStyle}>
-                    <HomeButton 
-                        url = {require("../images/customers.png")}
+                <Link to="http://localhost:8000/api/dashboard" style={linkStyle}>
+                    <HomeButton
+                        type = "analytics"
                         text = "Analytics"
                     />
                 </Link>
-                <Link to="http://localhost:5000/api/dashboard" style={linkStyle}>
+                <Link to="http://localhost:8000/api/dashboard" style={linkStyle}>
                     <HomeButton 
-                        url = {require("../images/customers.png")}
+                        type = "customers"
                         text = "Un-Turned Customers"
                     />
                 </Link>

@@ -46,20 +46,12 @@ body{
     margin: 4% 4%;
 }
 
-.home-button :hover {
-    /* height: 10rem;
-    transition: 0.3s; */
-    /* background: rgba( 255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(64, 66, 64, 0.37);
-    backdrop-filter: blur( 80px );
-    -webkit-backdrop-filter: blur( 80px );
-    border-radius: 10px; */
-    /* border: 2px solid rgba( 255, 255, 255, 0.18 );  */
-}
 
 .home-btn-img {
     block-size: 8rem;
     padding: 3.2rem 7.8rem 1.2rem 7rem;
+    height: 7rem;
+    width: 11.5rem;
 }
 
 @media screen and (max-width:500px) {
