@@ -1,0 +1,29 @@
+.customer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.customer-container h1 {
+    font-family: 'Borel', cursive;
+    font-size: 3rem;
+    color: #ffffff8b;
+    text-align: center;
+    margin: 0;
+    padding-top: 0.8%;
+}
+
+.form-container {
+  background: rgba(171, 208, 185, 0.763);
+  /* background: rgba( 255, 255, 255, 0.15); */
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+  backdrop-filter: blur( 40px );
+  -webkit-backdrop-filter: blur( 40px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  text-align: center;
+  margin: 2% 5% 5% 5%;
+  padding: 4%;
+}

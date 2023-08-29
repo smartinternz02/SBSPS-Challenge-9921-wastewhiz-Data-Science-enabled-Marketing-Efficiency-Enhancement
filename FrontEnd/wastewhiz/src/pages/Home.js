@@ -20,7 +20,7 @@ const Home = () => {
                         text = "Analytics"
                     />
                 </Link>
-                <Link to="https://wastewhiz-api.onrender.com/api/dashboard" style={linkStyle}>
+                <Link to="/customers" style={linkStyle}>
                     <HomeButton 
                         type = "customers"
                         text = "Un-Turned Customers"
