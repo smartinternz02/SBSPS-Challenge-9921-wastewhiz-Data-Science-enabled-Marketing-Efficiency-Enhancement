@@ -4,25 +4,26 @@ const fields = [
     "Deal_value",
     "Weighted_amount",
     "Internal_rating",
-    "Industry_Advertising/PR",
     "Industry_Aerospace/Defense",
     "Industry_Aircraft Parts",
     "Industry_Airlines/Air Couriers",
     "Industry_Alternative",
     "Industry_Apparel Products",
     "Industry_Apparel Retail",
+    "Industry_Appliances/Tools",
     "Industry_Architecture/Engineering",
     "Industry_Associations",
+    "Industry_Auto Dealers",
     "Industry_Auto Manufacturers",
     "Industry_Auto Parts/Services",
     "Industry_Automotive/Transportation",
     "Industry_B2B eCommerce",
+    "Industry_BSPs (Broadband)",
     "Industry_Banks",
     "Industry_Beverages (Alcoholic)",
     "Industry_Beverages (Non-Alcoholic)",
     "Industry_BioTech/Drugs",
     "Industry_Biotech/Healthcare",
-    "Industry_Book",
     "Industry_Casinos/Gaming",
     "Industry_Catalog/MailOrder",
     "Industry_Chemical Manufacturing",
@@ -34,13 +35,12 @@ const fields = [
     "Industry_Construction Services",
     "Industry_Construction/Agriculture",
     "Industry_Consumer Products",
-    "Industry_Database",
     "Industry_Department/Discount",
-    "Industry_ERP",
     "Industry_Education/Training",
     "Industry_Electric Utilities",
     "Industry_Electronics",
     "Industry_Energy",
+    "Industry_Enterprise",
     "Industry_Entertainment/Media",
     "Industry_Fabricated Products",
     "Industry_Finance",
@@ -51,6 +51,7 @@ const fields = [
     "Industry_Gold/Silver",
     "Industry_Government",
     "Industry_Grocery",
+    "Industry_Hardware Consulting",
     "Industry_Health/Accident",
     "Industry_Healthcare Facilities/Services",
     "Industry_Home Improvement",
@@ -61,7 +62,6 @@ const fields = [
     "Industry_Industrial Equip",
     "Industry_Information Services",
     "Industry_Insurance",
-    "Industry_Internet",
     "Industry_Internet Consulting",
     "Industry_Internet Software",
     "Industry_Investment Bank/Brokerage",
@@ -77,19 +77,18 @@ const fields = [
     "Industry_Medical Equipment",
     "Industry_Metals/Mining",
     "Industry_Movies",
+    "Industry_Multimedia Hardware",
     "Industry_Multimedia Software",
     "Industry_Music",
-    "Industry_Natural Gas",
     "Industry_Network Infrastructure",
     "Industry_Networking/Comm.",
-    "Industry_Newspapers",
     "Industry_Non-Profit",
-    "Industry_OSPs (Optical)",
     "Industry_Office Equipment",
     "Industry_Office Supplies",
     "Industry_Oil, Gas, Coal",
     "Industry_Online Banking",
     "Industry_Other",
+    "Industry_Other Biz Products",
     "Industry_Other Biz Services",
     "Industry_Other Consulting",
     "Industry_Other Investment Firms",
@@ -108,21 +107,19 @@ const fields = [
     "Industry_Property/Casualty",
     "Industry_Publishing",
     "Industry_REIT",
-    "Industry_Railroads",
+    "Industry_Radio",
     "Industry_Real Estate",
     "Industry_Recreational Products",
     "Industry_Recreational Services",
-    "Industry_Religious Groups",
     "Industry_Rentals/Leasing",
     "Industry_Restaurants",
     "Industry_Retail",
     "Industry_SaaS",
     "Industry_Sales/Marketing Services",
-    "Industry_Sales/Marketing Software",
+    "Industry_Satellite/RF/Micro",
     "Industry_Schools",
     "Industry_Scientific",
     "Industry_Security Hardware",
-    "Industry_Security Services",
     "Industry_Security Software",
     "Industry_Semiconductors",
     "Industry_Servers/Storage",
@@ -133,7 +130,6 @@ const fields = [
     "Industry_Software",
     "Industry_Software Consulting",
     "Industry_Specialty",
-    "Industry_Speech Recognition",
     "Industry_Staffing",
     "Industry_Staffing/Outsourcing/HR",
     "Industry_Supply Chain",
@@ -142,7 +138,6 @@ const fields = [
     "Industry_Telecom Consulting",
     "Industry_Telecom Hardware",
     "Industry_Telecom Services/Telephone Companies",
-    "Industry_Telecom Software",
     "Industry_Television/Cable",
     "Industry_Testing",
     "Industry_Training",
@@ -155,18 +150,15 @@ const fields = [
     "Industry_Warehousing/Logistics",
     "Industry_Waste/Recycling",
     "Industry_Water Utilities",
-    "Industry_Wireless Consulting",
+    "Industry_Web",
+    "Industry_Web Development",
     "Industry_Wireless Hardware",
+    "Industry_Wireless Software Networking",
     "Industry_Wood/Paper",
     "Industry_Wood/Timber",
     "Industry_eBusiness",
     "Industry_eCommerce",
-    "Pitch_Product_2",
-    "Lead_revenue_50 - 100 Million",
-    "Lead_revenue_500 Million - 1 Billion",
-    "Fund_category_Category 2",
-    "Fund_category_Category 3",
-    "Fund_category_Category 4",
+    "Industry_eMail/Messaging",
     "Designation_CEO/Chairman/President",
     "Designation_CEO/Co-Founder/Chairman",
     "Designation_CEO/President",
@@ -182,7 +174,6 @@ const fields = [
     "Hiring_candidate_role_Accountant, chartered management",
     "Hiring_candidate_role_Accountant, chartered public finance",
     "Hiring_candidate_role_Accounting technician",
-    "Hiring_candidate_role_Actor",
     "Hiring_candidate_role_Actuary",
     "Hiring_candidate_role_Acupuncturist",
     "Hiring_candidate_role_Administrator",
@@ -370,7 +361,6 @@ const fields = [
     "Hiring_candidate_role_Emergency planning/management officer",
     "Hiring_candidate_role_Energy engineer",
     "Hiring_candidate_role_Energy manager",
-    "Hiring_candidate_role_Engineer, aeronautical",
     "Hiring_candidate_role_Engineer, agricultural",
     "Hiring_candidate_role_Engineer, automotive",
     "Hiring_candidate_role_Engineer, biomedical",
@@ -404,6 +394,7 @@ const fields = [
     "Hiring_candidate_role_Environmental consultant",
     "Hiring_candidate_role_Environmental education officer",
     "Hiring_candidate_role_Environmental health practitioner",
+    "Hiring_candidate_role_Environmental manager",
     "Hiring_candidate_role_Equality and diversity officer",
     "Hiring_candidate_role_Equities trader",
     "Hiring_candidate_role_Ergonomist",
@@ -587,7 +578,6 @@ const fields = [
     "Hiring_candidate_role_Oncologist",
     "Hiring_candidate_role_Operational investment banker",
     "Hiring_candidate_role_Operational researcher",
-    "Hiring_candidate_role_Operations geologist",
     "Hiring_candidate_role_Ophthalmologist",
     "Hiring_candidate_role_Optician, dispensing",
     "Hiring_candidate_role_Optometrist",
@@ -658,7 +648,6 @@ const fields = [
     "Hiring_candidate_role_Psychotherapist, dance movement",
     "Hiring_candidate_role_Public affairs consultant",
     "Hiring_candidate_role_Public house manager",
-    "Hiring_candidate_role_Public librarian",
     "Hiring_candidate_role_Public relations account executive",
     "Hiring_candidate_role_Public relations officer",
     "Hiring_candidate_role_Publishing copy",
@@ -813,6 +802,12 @@ const fields = [
     "Hiring_candidate_role_Wellsite geologist",
     "Hiring_candidate_role_Writer",
     "Hiring_candidate_role_Youth worker",
+    "Pitch_Product_2",
+    "Lead_revenue_50 - 100 Million",
+    "Lead_revenue_500 Million - 1 Billion",
+    "Fund_category_Category 2",
+    "Fund_category_Category 3",
+    "Fund_category_Category 4",
     "Lead_source_Marketing Event",
     "Lead_source_Others",
     "Lead_source_Website",
@@ -893,73 +888,74 @@ const fields = [
     "Last_lead_update_more than a month"
 ];
 
-const getValues = (req, res, next) => {
+const getValues = async (req, res, next) => {
     const {
-        Deal_value, 
-        Weighted_amount, 
-        Internal_rating, 
-        Industry, 
-        Pitch_Product, 
-        Lead_revenue,
-        Fund_category,
-        Designation,
-        Hiring_candidate_role,
-        Lead_source,
-        Level_of_meeting,
-        Internal_POC,
-        Resource,
-        Last_lead_update // == more than a month
+        deal,
+        weighted,
+        internal,
+        industry,
+        pitch,
+        revenue,
+        fund,
+        designation,
+        hiring,
+        source,
+        level,
+        poc,
+        resource,
+        update,
+        geography
     } = req.body;
 
     let values = [];
-    for (let i = 0; i < 890; i++) {
+    for (let i = 0; i < 885; i++) {
         values.push(0);
     }
 
     fields.findIndex((field, index) => {
-        if (field === "Last_lead_update_"+Last_lead_update) {
+        if (field === "Last_lead_update_"+update) {
             values[index] = 1;
         }
-        else if (field === "Resource_"+Resource) {
+        else if (field === "Resource_"+resource) {
             values[index] = 1;
         }
-        else if (field === "Internal_POC_"+Internal_POC) {
+        else if (field === "Internal_POC_"+poc) {
             values[index] = 1;
         }
-        else if (field === "Level_of_meeting_"+Level_of_meeting) {
+        else if (field === "Level_of_meeting_"+level) {
             values[index] = 1;
         }
-        else if (field === "Lead_source_"+Lead_source) {
+        else if (field === "Lead_source_"+source) {
             values[index] = 1;
         }
-        else if (field === "Hiring_candidate_role_"+Hiring_candidate_role) {
+        else if (field === "Hiring_candidate_role_"+hiring) {
             values[index] = 1;
         }
-        else if (field === "Designation_"+Designation) {
+        else if (field === "Designation_"+designation) {
             values[index] = 1;
         }
-        else if (field === "Fund_category_"+Fund_category) {
+        else if (field === "Fund_category_"+fund) {
             values[index] = 1;
         }
-        else if (field === "Lead_revenue_"+Lead_revenue) {
+        else if (field === "Lead_revenue_"+revenue) {
             values[index] = 1;
         }
-        else if (field === "Pitch_Product_2") {
-            values[index] = Pitch_Product - 1;
+        else if (field === "Pitch_"+pitch) {
+            values[index] = 1;
         }
-        else if (field === "Industry_"+Industry) {
+        else if (field === "Industry_"+industry) {
             values[index] = 1;
         }
 
     });
 
-    values[0] = Deal_value;
-    values[1] = Weighted_amount;
-    values[2] = Internal_rating;
-
+    values[0] = deal;
+    values[1] = weighted;
+    values[2] = internal;
     return values;
 
 };
+
 
 
 module.exports = {

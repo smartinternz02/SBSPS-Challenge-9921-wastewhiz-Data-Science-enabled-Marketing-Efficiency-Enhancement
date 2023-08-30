@@ -1,7 +1,7 @@
 const HttpError = require('../models/https-error');
 
 const predictions = require('../utils/predictions');
-const predValues = require('../utils/prediction-values');
+const predValues = require('../models/prediction-model');
 
 
 // -------------------------------------------GET-------------------------------------------------- //
@@ -17,17 +17,25 @@ const getDashboard = async (req, res, next) =>{
 // api/dashboard/predictions => POST [controller for posting PREDCITIONS]
 
 const postPredictions = async (req, res, next) =>{
-    const values = predValues.getValues();
+    let values;
+    try{
+        values = await predValues.getValues(req, res, next);
+    }
+    catch(err){
+        const error = new HttpError('Getting values failed', 500);
+        return next(error);
+    }
 
     let prediction;
     try{
-        prediction = await predictions.predict();
+        prediction = await predictions.predict(req,res,next,values);
     }
     catch(err){
-        const error = new HttpError('Prediction failed', 500);
+        const error = new HttpError('Prediction failed in controller', 500);
         return next(error);
     }
-    res.json({prediction: prediction});
+    console.log(prediction[0].values[0][0]);
+    res.json({"prediction": prediction[0].values[0][0]});
 };
 
 
