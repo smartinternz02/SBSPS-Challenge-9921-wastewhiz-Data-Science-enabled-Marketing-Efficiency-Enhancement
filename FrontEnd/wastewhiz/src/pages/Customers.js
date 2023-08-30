@@ -6,11 +6,12 @@ import "./Customers.css";
 const Customers = () => {
     return (
         <React.Fragment>
+
             <div className="customer-container">
                 <h1 className="customers-title">Un-Turned Customers</h1>
-                <div className="form-container">
+                {/* <div className="form-container"> */}
                     <Form />
-                </div>
+                {/* </div> */}
             </div>
         </React.Fragment>
     );

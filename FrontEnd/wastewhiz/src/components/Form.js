@@ -1,8 +1,12 @@
-
+import React, { Fragment as ReactFragment } from 'react'
 import { useState } from 'react'
 import {useHttpClient} from '../hooks/http-hook'
+import Loader from './Loader'
+import Modal from './Modal'
+import '../pages/Customers.css'
 
 export default function Form() {
+  const [prediction, setPrediction] = useState(0)
   const [deal, setDeal] = useState()
   const [weighted, setWeighted] = useState()
   const [internal, setInternal] = useState()
@@ -56,6 +60,7 @@ export default function Form() {
         }
       )
       console.log(response)
+      setPrediction(response)
     } catch (err) {
       console.log(err)
     }
@@ -135,20 +140,32 @@ export default function Form() {
     setGeography(e.target.value)
   }
 
+  const clearPred = () => {
+    setPrediction(0)
+  }
+
 
 
 
   return (
+    <ReactFragment>
+    {error && <Modal icon="error" title="Error" text={error} onClear={clearError} />}
+    {prediction && <Modal icon="success" title={`${prediction}%`} iconColor="rgb(22 101 52)" text={`The Success Probability is ${prediction}%`} onClear={clearPred} />}
+    {isLoading && 
+      <Loader 
+        asOverlay 
+        text={'Predicting the success probability...'} 
+      />}
+    <div className="form-container">
     <form>
-      {error && <h1 style={{color:'red'}}>{error}</h1>}
       <div className="space-y-12">
-        <div className="border-b border-gray-900/10 pb-12">
+        <div className="border-b border-gray-900/10 pb-12" >
           <h2 className="text-base font-semibold leading-7 text-2xl">Details</h2>
           <p className="mt-1 text-sm leading-6 text-gray-900">
             Enter the details of the Deal below (Please fill in all the Fields for higher accuracy).
           </p>
 
-          <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-1 place-items-center" >
             <div className="sm:col-span-4">
               <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900">
                 Deal Value
@@ -212,8 +229,8 @@ export default function Form() {
           </div>
         </div> 
 
-
-        <div className="sm:col-span-3">
+        <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-1 place-items-center" >
+        <div className="sm:col-span-3" >
           <label htmlFor="country" className="block text-sm font-medium leading-6 text-gray-900">
             Industry
           </label>
@@ -660,17 +677,21 @@ export default function Form() {
           </div>
         </div>
 
+        </div>
+
         <button
           onClick={(e) => handleSubmit(e)}
           type='button'
-          className='inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none'
+          className='inline-flex items-center px-40 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-800 hover:bg-green-950 focus:outline-none'
           disabled={isLoading}
         >
-          SUBMIT
+          PREDICT
         </button>
 
       
       </div>
     </form>
+    </div>
+    </ReactFragment>
   )
 }
