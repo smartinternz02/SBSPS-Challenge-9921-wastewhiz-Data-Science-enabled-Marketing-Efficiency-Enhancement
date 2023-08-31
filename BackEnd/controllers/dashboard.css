@@ -1,0 +1,46 @@
+.insights {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 30%;
+    background-color: #c9d869d3;
+    border-radius: 4px;
+    border: 1px solid #082f1c;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.insights:hover {
+    background-color: #525c0f;
+}
+
+body {
+    background-color: #2e3b23;
+}
+
+.button-div {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+/* .button-div a{
+    text-decoration: none;
+    color: #022b04;
+    text-decoration: bold; */
+/* } */
+
+button {
+    background-color: #c9d86900;
+    border-radius: 4px;
+    border:0px solid #082f1c;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    padding: 5px;
+    margin: 5px;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
