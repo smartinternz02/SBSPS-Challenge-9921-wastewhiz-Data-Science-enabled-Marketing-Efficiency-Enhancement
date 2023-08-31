@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import Customers from './pages/Customers';
+import Insights from './pages/Insights';
 
 const App = () => {
 
@@ -13,6 +14,9 @@ const App = () => {
         </Route>
         <Route path="/customers">
           <Route index element={<Customers />} /> 
+        </Route>
+        <Route path="/insights">
+          <Route index element={<Insights />} /> 
         </Route>
       </Routes>
     </BrowserRouter>

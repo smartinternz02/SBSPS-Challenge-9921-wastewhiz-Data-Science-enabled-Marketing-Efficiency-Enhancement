@@ -165,9 +165,9 @@ export default function Form() {
             Enter the details of the Deal below (Please fill in all the Fields for higher accuracy).
           </p>
 
-          <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-1 place-items-center" >
+          <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-1 place-items-left" >
             <div className="sm:col-span-4">
-              <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900">
+              <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900 text-left">
                 Deal Value
               </label>
               <div className="mt-2">
@@ -187,7 +187,7 @@ export default function Form() {
 
 
             <div className="sm:col-span-4">
-              <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900">
+              <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900 text-left">
                 Weighted Amount
               </label>
               <div className="mt-2">
@@ -208,7 +208,7 @@ export default function Form() {
 
 
             <div className="sm:col-span-4">
-              <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900">
+              <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900 text-left">
                 Internal Rating
               </label>
               <div className="mt-2">
@@ -229,12 +229,12 @@ export default function Form() {
           </div>
         </div> 
 
-        <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-1 place-items-center" >
+      <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 place-items-left" >
         <div className="sm:col-span-3" >
           <label htmlFor="country" className="block text-sm font-medium leading-6 text-gray-900">
             Industry
           </label>
-          <div className="mt-2">
+          <div className="mt-1">
             <select
               id="Industry"
               name="Industry"

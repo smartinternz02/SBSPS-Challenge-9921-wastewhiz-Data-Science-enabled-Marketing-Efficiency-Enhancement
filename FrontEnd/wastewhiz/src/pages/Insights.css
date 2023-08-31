@@ -1,0 +1,29 @@
+.insights-card {
+    background: rgba( 255, 255, 255, 0.15);
+    box-shadow: 0 3px 12px 0 rgba(252, 254, 252, 0.235);
+    backdrop-filter: blur( 30px );
+    -webkit-backdrop-filter: blur( 30px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    text-align: center;
+    margin:2% 6%;
+    padding: 2%;
+}
+
+.insights-heading {
+    font-family: 'Borel', cursive;
+    font-size: 3rem;
+    color: #ffffff8b;
+    text-align: center;
+    margin: 0;
+    padding-top: 3%;
+    padding-bottom: 0;
+}
+
+.insights-constainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
