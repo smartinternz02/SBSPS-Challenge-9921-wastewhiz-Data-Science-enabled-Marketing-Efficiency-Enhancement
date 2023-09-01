@@ -17,6 +17,11 @@ const getDashboard = async (req, res, next) =>{
 // api/dashboard/predictions => POST [controller for posting PREDCITIONS]
 
 const postPredictions = async (req, res, next) =>{
+    const {geography} = req.body;
+    if (!geography){
+        const error = new HttpError('Invalid inputs passed, please check your data', 422);
+        return next(error);
+    }
     let values;
     try{
         values = await predValues.getValues(req, res, next);
@@ -28,7 +33,7 @@ const postPredictions = async (req, res, next) =>{
 
     let prediction;
     try{
-        prediction = await predictions.predict(req,res,next,values);
+        prediction = await predictions.predict(req, res, next, values, geography);
     }
     catch(err){
         const error = new HttpError('Prediction failed in controller', 500);

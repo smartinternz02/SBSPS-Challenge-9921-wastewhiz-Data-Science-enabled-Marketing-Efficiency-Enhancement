@@ -37,7 +37,7 @@ const getToken = async (req, res) => {
 		return token;
 }
 
-const getPrediction = async (req, res, access_token, values) => {
+const getPrediction = async (req, res, access_token, values, geography) => {
 	// after token is received
 	// console.log(req, res ,access_token, values)
 	let data_json = {
@@ -937,10 +937,18 @@ const getPrediction = async (req, res, access_token, values) => {
 
 	let data = JSON.stringify(data_json);
 
+	let geo_url;
+	if (geography == "India") {
+		geo_url= 'https://jp-tok.ml.cloud.ibm.com/ml/v4/deployments/806dd405-de53-47e5-ba3d-c453d63d1057/predictions?version=2021-05-01'
+	}
+	else {
+		geo_url= 'https://jp-tok.ml.cloud.ibm.com/ml/v4/deployments/ba03348f-9ed1-4d97-b637-50bc8653bc60/predictions?version=2021-05-01'
+	}
+
 	let config = {
 		method: 'post',
 		maxBodyLength: Infinity,
-		url: 'https://jp-tok.ml.cloud.ibm.com/ml/v4/deployments/0d63cab7-2ddb-4bef-a782-8970d0af15b8/predictions?version=2021-05-01',
+		url: geo_url,
 		headers: { 
 			'Accept': 'application/json', 
 			'Authorization': 'Bearer ' + access_token, 
@@ -964,7 +972,7 @@ const getPrediction = async (req, res, access_token, values) => {
 }
 
 
-const predict = async (req, res, next, values) => {
+const predict = async (req, res, next, values, geography) => {
 
 	let access_token;
 	try {
@@ -982,7 +990,7 @@ const predict = async (req, res, next, values) => {
 
 	let prediction;
 	try {
-		prediction = await getPrediction(req, res, access_token, values)
+		prediction = await getPrediction(req, res, access_token, values, geography)
 	}
 	catch(err){
 		const error = new HttpError('Prediction failed', 500);
