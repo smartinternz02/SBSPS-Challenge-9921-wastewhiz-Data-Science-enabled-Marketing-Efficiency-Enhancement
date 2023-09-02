@@ -60,7 +60,7 @@ export default function Form() {
         }
       )
       console.log(response)
-      setPrediction(response)
+      setPrediction(response.prediction)
     } catch (err) {
       console.log(err)
     }
