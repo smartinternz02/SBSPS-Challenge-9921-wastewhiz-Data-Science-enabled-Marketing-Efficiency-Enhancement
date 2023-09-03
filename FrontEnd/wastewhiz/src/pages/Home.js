@@ -14,7 +14,7 @@ const Home = () => {
         <React.Fragment>
             <h1 className="home-title">WasteWhiz: Market Analytics Tool!</h1>
             <div className="home">
-                <Link to="https://wastewhiz-api.onrender.com/api/dashboard" style={linkStyle}>
+                <Link to="http://localhost:8000/api/dashboard" style={linkStyle}>
                     <HomeButton
                         type = "analytics"
                         text = "Analytics"

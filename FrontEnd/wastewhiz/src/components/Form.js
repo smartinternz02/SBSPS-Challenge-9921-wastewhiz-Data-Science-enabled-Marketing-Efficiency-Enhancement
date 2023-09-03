@@ -52,7 +52,7 @@ export default function Form() {
 
     try {
       const response = await sendRequest(
-        'https://wastewhiz-api.onrender.com/api/dashboard/predictions',
+        'http://localhost:8000/api/dashboard/predictions',
         'POST',
         JSON.stringify(data),
         {

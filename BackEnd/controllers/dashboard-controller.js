@@ -8,7 +8,7 @@ const predValues = require('../models/prediction-model');
 
 // api/dashboard => GET [controller for getting dashboard]
 const getDashboard = async (req, res, next) =>{
-    res.sendFile(__dirname + '/dashboard.html');
+    res.sendFile('dashboard.html', {root: './views'});
 };
 
 
@@ -39,6 +39,7 @@ const postPredictions = async (req, res, next) =>{
         const error = new HttpError('Prediction failed in controller', 500);
         return next(error);
     }
+    
     console.log(prediction[0].values[0][0]);
     res.json({"prediction": prediction[0].values[0][0]});
 };
