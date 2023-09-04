@@ -23,7 +23,7 @@ const Home = () => {
                 <Link to="/customers" style={linkStyle}>
                     <HomeButton 
                         type = "customers"
-                        text = "Un-Turned Customers"
+                        text = "Prediction"
                     />
                 </Link>
             </div>

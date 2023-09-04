@@ -243,6 +243,7 @@ export default function Form() {
               value={industry}
               onChange={(e)=> handleIndustry(e)}
             >
+              <option></option>
               <option>Advertising/PR</option>
               <option>Aerospace/Defense</option>
               <option>Aircraft Parts</option>
@@ -415,6 +416,7 @@ export default function Form() {
               onChange={(e)=> handlePitch(e)}
               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
             >
+              <option></option>
               <option>Product 1</option>
               <option>Product 2</option>
             </select>
@@ -433,6 +435,7 @@ export default function Form() {
               onChange={(e)=> handleRevenue(e)}
               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
             >
+              <option></option>
               <option>50 - 100 Million</option>
               <option>500 Million - 1 Billion</option>
             </select>
@@ -450,6 +453,7 @@ export default function Form() {
               onChange={(e)=> handleFund(e)}
               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
               >
+              <option></option>
               <option>Category 2</option>
               <option>Category 3</option>
               <option>Category 4</option>
@@ -468,6 +472,7 @@ export default function Form() {
               onChange={(e)=> handleDesignation(e)}
               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
             >
+              <option></option>
               <option>CEO/Chairman/President</option>
               <option>CEO/Co-Founder/Chairman</option>
               <option>CEO/President</option>
@@ -492,6 +497,7 @@ export default function Form() {
               onChange={(e)=> handleHiring(e)}
               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
             >
+              <option></option>
               <option>Accommodation manager</option>
               <option>Accountant, chartered</option>
               <option>Accountant, chartered certified</option>
@@ -551,6 +557,7 @@ export default function Form() {
               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
               onChange={(e)=> handleSource(e)}
               >
+              <option></option>
               <option>Marketing Event</option>
               <option>Website</option>
               <option>Others</option>
@@ -570,6 +577,7 @@ export default function Form() {
               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
               onChange={(e)=> handleLevel(e)}
               >
+              <option></option>
               <option>Level 2</option>
               <option>level 3</option>
             </select>
@@ -588,6 +596,7 @@ export default function Form() {
               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
               onChange={(e)=> handlePOC(e)}
               >
+              <option></option>
               <option>Ali,Mohamed</option>
               <option>Anthony,Katherine D</option>
               <option>Bannister,Joan</option>
@@ -625,6 +634,7 @@ export default function Form() {
               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
               onChange={(e)=> handleResource(e)}
               >
+              <option></option>
               <option>Deliverable</option>
               <option>No</option>
               <option>Not enough</option>
@@ -646,6 +656,7 @@ export default function Form() {
               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
               onChange={(e)=> handleUpdate(e)}
               >
+              <option></option>
               <option>5 days back</option>
               <option>Did not hear back after Level 1</option>
               <option>Following up but lead not responding</option>
@@ -672,6 +683,7 @@ export default function Form() {
               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
 
               >
+              <option></option> 
               <option>India</option>
               <option>USA</option>
             </select>
