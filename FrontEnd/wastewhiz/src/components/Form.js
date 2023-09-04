@@ -7,6 +7,7 @@ import '../pages/Customers.css'
 
 export default function Form() {
   const [prediction, setPrediction] = useState(0)
+  const [suggestion, setSuggestion] = useState('')
   const [deal, setDeal] = useState()
   const [weighted, setWeighted] = useState()
   const [internal, setInternal] = useState()
@@ -23,7 +24,6 @@ export default function Form() {
   const [poc, setPOC] = useState('')
   const [geography, setGeography] = useState('')
 
-  const [valid, setValid] = useState(false)
 
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
 
@@ -52,7 +52,7 @@ export default function Form() {
 
     try {
       const response = await sendRequest(
-        'http://localhost:8000/api/dashboard/predictions',
+        'https://wastewhiz-api.onrender.com/api/dashboard/predictions',
         'POST',
         JSON.stringify(data),
         {
@@ -60,7 +60,8 @@ export default function Form() {
         }
       )
       console.log(response)
-      setPrediction(response)
+      setPrediction(response.prediction)
+      setSuggestion(response.suggestion)
     } catch (err) {
       console.log(err)
     }
@@ -150,7 +151,7 @@ export default function Form() {
   return (
     <ReactFragment>
     {error && <Modal icon="error" title="Error" text={error} onClear={clearError} />}
-    {prediction && <Modal icon="success" title={`${prediction}%`} iconColor="rgb(22 101 52)" text={`The Success Probability is ${prediction}%`} onClear={clearPred} />}
+    {prediction && <Modal icon="success" title={`${prediction}%`} iconColor="rgb(22 101 52)" text={suggestion} onClear={clearPred} />}
     {isLoading && 
       <Loader 
         asOverlay 
