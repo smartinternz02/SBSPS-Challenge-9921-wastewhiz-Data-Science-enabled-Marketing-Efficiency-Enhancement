@@ -22,31 +22,42 @@ const postPredictions = async (req, res, next) =>{
         const error = new HttpError('Invalid inputs passed, please check your data', 422);
         return next(error);
     }
-    // let values;
-    // try{
-    //     values = await predValues.getValues(req, res, next);
-    // }
-    // catch(err){
-    //     const error = new HttpError('Getting values failed', 500);
-    //     return next(error);
-    // }
+    let values;
+    try{
+        values = await predValues.getValues(req, res, next);
+    }
+    catch(err){
+        const error = new HttpError('Getting values failed', 500);
+        return next(error);
+    }
 
-    // let prediction;
-    // try{
-    //     prediction = await predictions.predict(req, res, next, values, geography);
-    // }
-    // catch(err){
-    //     const error = new HttpError('Prediction failed in controller', 500);
-    //     return next(error);
-    // }
+    let prediction;
+    try{
+        prediction = await predictions.predict(req, res, next, values, geography);
+    }
+    catch(err){
+        const error = new HttpError('Prediction failed in controller', 500);
+        return next(error);
+    }
     
-    // console.log(prediction[0].values[0][0]);
-    // res.json({"prediction": prediction[0].values[0][0]});
-    //1054
+    console.log(prediction[0].values[0][0]);
+
+    let suggestion;
+    if (prediction[0].values[0][0] < 50){
+        suggestion = "Poor Chances of getting the deal done";
+    }
+    else if (prediction[0].values[0][0] < 60){
+        suggestion = "Fairly Good Chances of getting the deal done";
+    }
+    else {
+        suggestion = "Great Chances of getting the deal done";
+    }
+
     res.json({
-        "prediction": 64.1, 
-        "suggestion": "Fairly high chance of getting the deal done."
+        "prediction": prediction[0].values[0][0],
+        "suggestion": suggestion
     });
+
 };
 
 
