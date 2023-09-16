@@ -939,7 +939,7 @@ const getPrediction = async (req, res, access_token, values, geography) => {
 
 	let geo_url;
 	if (geography == "India") {
-		geo_url= 'https://jp-tok.ml.cloud.ibm.com/ml/v4/deployments/0d63cab7-2ddb-4bef-a782-8970d0af15b8/predictions?version=2021-05-01'
+		geo_url= 'https://jp-tok.ml.cloud.ibm.com/ml/v4/deployments/03c74caa-a457-47e4-bd21-1886ab9df3cd/predictions?version=2021-05-01'
 	}
 	else {
 		geo_url= 'https://jp-tok.ml.cloud.ibm.com/ml/v4/deployments/0d63cab7-2ddb-4bef-a782-8970d0af15b8/predictions?version=2021-05-01'
