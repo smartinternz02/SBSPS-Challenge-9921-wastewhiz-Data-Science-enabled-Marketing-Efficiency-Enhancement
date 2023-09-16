@@ -66,14 +66,7 @@ export default function Form() {
       console.log(err)
     }
 
-    // sendRequest(
-    //   'http://localhost:8000/api/dashboard/predictions',
-    //   'POST',
-    //   JSON.stringify(data),
-    //   {
-    //     'Content-Type': 'application/json'
-    //   }
-    // )
+    
       
     console.log(data)
     e.preventDefault()
