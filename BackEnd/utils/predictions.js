@@ -939,10 +939,10 @@ const getPrediction = async (req, res, access_token, values, geography) => {
 
 	let geo_url;
 	if (geography == "India") {
-		geo_url= 'https://jp-tok.ml.cloud.ibm.com/ml/v4/deployments/806dd405-de53-47e5-ba3d-c453d63d1057/predictions?version=2021-05-01'
+		geo_url= 'https://jp-tok.ml.cloud.ibm.com/ml/v4/deployments/0d63cab7-2ddb-4bef-a782-8970d0af15b8/predictions?version=2021-05-01'
 	}
 	else {
-		geo_url= 'https://jp-tok.ml.cloud.ibm.com/ml/v4/deployments/ba03348f-9ed1-4d97-b637-50bc8653bc60/predictions?version=2021-05-01'
+		geo_url= 'https://jp-tok.ml.cloud.ibm.com/ml/v4/deployments/0d63cab7-2ddb-4bef-a782-8970d0af15b8/predictions?version=2021-05-01'
 	}
 
 	let config = {

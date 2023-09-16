@@ -41,12 +41,13 @@ const postPredictions = async (req, res, next) =>{
     }
     
     console.log(prediction[0].values[0][0]);
+    const answer = prediction[0].values[0][0];
 
     let suggestion;
-    if (prediction[0].values[0][0] < 50){
+    if (answer < 50){
         suggestion = "Poor Chances of getting the deal done";
     }
-    else if (prediction[0].values[0][0] < 60){
+    else if (answer < 70){
         suggestion = "Fairly Good Chances of getting the deal done";
     }
     else {
@@ -54,10 +55,9 @@ const postPredictions = async (req, res, next) =>{
     }
 
     res.json({
-        "prediction": prediction[0].values[0][0],
+        "prediction": answer,
         "suggestion": suggestion
     });
-
 };
 
 
