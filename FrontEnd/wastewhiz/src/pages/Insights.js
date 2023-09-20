@@ -3,10 +3,11 @@ import './Insights.css'
 
 const Insights = () => {
     return (
-        <div>
+        <div className="insights">
         <h1 className="insights-heading">Insights</h1>
         <div className="insights-container">
             <div className="insights-card">
+                
                 <p>
                     We observe that the success probability in USA is greater than that of India. Some possible reasons maybe: 
                 </p>
@@ -17,8 +18,6 @@ const Insights = () => {
                 <p>
                     <b>Regulatory environment: </b>The regulatory environment for direct selling is more favorable in the US than in India. This makes it easier for businesses to operate and grow in the US.
                 </p>
-            </div>
-            <div className="insights-card">
                 <p>
                     We observe that banks and real estates have highest success probability.
                 </p>
@@ -29,8 +28,6 @@ const Insights = () => {
                 <p>
                     <b>Real estate: </b>Real estate is a tangible asset that has intrinsic value. Additionally, the demand for real estate is typically strong, even during economic downturns. This makes the real estate industry a relatively safe and profitable investment.
                 </p>
-            </div>
-            <div className="insights-card">
                 <p>
                     <b>The lead is still interested:</b> The lead may still be interested in the product or service, but they are simply waiting for more information or a better offer. By following up with the lead, WasteWhiz can keep them engaged and increase the chances of them converting.
                 </p>
@@ -49,6 +46,7 @@ const Insights = () => {
                 <p>
                     <b>More information: </b>Marketing events allow WasteWhiz to provide the lead with more information about the product or service. This can help the lead to better understand the benefits of the product or service and make a more informed decision.
                 </p>
+            
             </div>
         </div>
         </div>
