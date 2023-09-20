@@ -8,7 +8,7 @@ const Customers = () => {
         <React.Fragment>
 
             <div className="customer-container">
-                <h1 className="customers-title">Un-Turned Customers</h1>
+                <h1 className="customers-title">Prediction</h1>
                 {/* <div className="form-container"> */}
                     <Form />
                 {/* </div> */}
