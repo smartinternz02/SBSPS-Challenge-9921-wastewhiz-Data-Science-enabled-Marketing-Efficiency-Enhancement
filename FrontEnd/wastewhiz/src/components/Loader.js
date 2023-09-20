@@ -9,8 +9,8 @@ const LoadingSpinner = props => {
             <MutatingDots 
                 height="100"
                 width="100"
-                color= '#A3D3FF'
-                secondaryColor= '#ec407a'
+                color= '#355E3B' 
+                secondaryColor= '#50C878'
                 radius='12.5'
                 ariaLabel="mutating-dots-loading"
                 wrapperStyle={{}}
